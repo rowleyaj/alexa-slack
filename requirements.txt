@@ -1,5 +1,5 @@
 cryptography
 flask
 gunicorn
-pylexa==1.0.0
+-e git://github.com/rowleyaj/pylexa.git@rowleyaj#egg=pylexa
 requests
