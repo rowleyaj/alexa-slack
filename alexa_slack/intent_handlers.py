@@ -3,7 +3,7 @@ from pylexa.intent import handle_intent
 from pylexa.response import LinkAccountCard, PlainTextSpeech, Response
 
 from alexa_slack.slack import post_to_slack
-
+from alexa_slack.response_builder import make_confirm_message_response, make_set_channel_response, make_set_message_response
 
 def require_access_token(func):
     def inner(request):
@@ -15,38 +15,6 @@ def require_access_token(func):
         else:
             return func(request)
     return inner
-
-
-def make_set_channel_response(message=None, retry=False):
-    text = 'What channel would you like to post your message to?'
-    if retry:
-        text = "Ok, let's try that again. {}".format(text)
-    speech = PlainTextSpeech(text)
-    reprompt = PlainTextSpeech('Say the name of the channel you would like to post to')
-    session = {
-        'message': message,
-    }
-    return Response(speech=speech, reprompt=reprompt, should_end_session=False, session=session)
-
-
-def make_set_message_response(channel, retry=False):
-    text = 'What would you like to post?'
-    if retry:
-        text = "Ok, let's try that again. {}".format(text)
-    return Response(
-        speech=PlainTextSpeech(text),
-        reprompt=PlainTextSpeech('Say the message you would like me to post'),
-        session={'channel': channel},
-        should_end_session=False,
-    )
-
-
-def make_confirm_message_response(message, channel):
-    return Response(
-        speech=PlainTextSpeech('Great. Would you like me to post {} to {}?'.format(message, channel)),
-        session={'channel': channel, 'message': message, 'confirming_message': True},
-        should_end_session=False,
-    )
 
 
 @handle_intent('SetChannel')

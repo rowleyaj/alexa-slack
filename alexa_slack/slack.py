@@ -1,6 +1,7 @@
 import requests
 
 from pylexa.response import PlainTextSpeech
+from alexa_slack.response_builder import make_set_channel_response
 
 
 def post_to_slack(channel, text, token):
@@ -16,6 +17,6 @@ def post_to_slack(channel, text, token):
     else:
         error = res.json().get('error')
         if error == 'channel_not_found':
-            return PlainTextSpeech('Sorry, I could not find the {} channel'.format(channel))
+            return make_set_channel_response(session.message, not_found=True)
         return PlainTextSpeech('Oh no, something went wrong.')
 
