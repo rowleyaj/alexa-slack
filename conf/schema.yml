@@ -154,13 +154,48 @@ utterances:
   StartMessage:
     - I want to post a message
     - Start a message
+    - Write message
+    - Send message
+    - Post message
   SetChannel:
     - '{channel}'
     - I want to post to {channel}
+    - I'd like to post to {channel}
+    - post to {channel}
+    - send to {channel}
+    - message {channel}
   SetChannelMessage:
     - I want to post {message} to {channel}
+    - I want to post {message} in {channel}
+    - I want to send {message} to {channel}
+    - I want to send {message} in {channel}
+    - I want to write {message} to {channel}
+    - I want to write {message} in {channel}
+    - I want to message {message} to {channel}
+    - I want to message {message} in {channel}
     - I'd like to post {message} to {channel}
+    - I'd like to post {message} in {channel}
+    - I'd like to send {message} to {channel}
+    - I'd like to send {message} in {channel}
+    - I'd like to write {message} to {channel}
+    - I'd like to write {message} in {channel}
+    - I'd like to message {message} to {channel}
+    - I'd like to message {message} in {channel}
+    - post {message} in {channel}
+    - post {message} to {channel}
+    - send {message} in {channel}
+    - send {message} to {channel}
+    - message {message} in {channel}
+    - message {message} to {channel}
+    - write {message} in {channel}
+    - write {message} to {channel}
   SetMessage:
     - '{message}'
-    - send {message}
+    - I want to post {message}
+    - I want to send {message}
+    - I want to message {message}
+    - I want to write {message}
     - post {message}
+    - send {message}
+    - write {message}
+    - message {message}

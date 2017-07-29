@@ -1,9 +1,44 @@
 SetChannel {channel}
 SetChannel I want to post to {channel}
+SetChannel I'd like to post to {channel}
+SetChannel post to {channel}
+SetChannel send to {channel}
+SetChannel message {channel}
 SetChannelMessage I want to post {message} to {channel}
+SetChannelMessage I want to post {message} in {channel}
+SetChannelMessage I want to send {message} to {channel}
+SetChannelMessage I want to send {message} in {channel}
+SetChannelMessage I want to write {message} to {channel}
+SetChannelMessage I want to write {message} in {channel}
+SetChannelMessage I want to message {message} to {channel}
+SetChannelMessage I want to message {message} in {channel}
 SetChannelMessage I'd like to post {message} to {channel}
+SetChannelMessage I'd like to post {message} in {channel}
+SetChannelMessage I'd like to send {message} to {channel}
+SetChannelMessage I'd like to send {message} in {channel}
+SetChannelMessage I'd like to write {message} to {channel}
+SetChannelMessage I'd like to write {message} in {channel}
+SetChannelMessage I'd like to message {message} to {channel}
+SetChannelMessage I'd like to message {message} in {channel}
+SetChannelMessage post {message} in {channel}
+SetChannelMessage post {message} to {channel}
+SetChannelMessage send {message} in {channel}
+SetChannelMessage send {message} to {channel}
+SetChannelMessage message {message} in {channel}
+SetChannelMessage message {message} to {channel}
+SetChannelMessage write {message} in {channel}
+SetChannelMessage write {message} to {channel}
 SetMessage {message}
-SetMessage send {message}
+SetMessage I want to post {message}
+SetMessage I want to send {message}
+SetMessage I want to message {message}
+SetMessage I want to write {message}
 SetMessage post {message}
+SetMessage send {message}
+SetMessage write {message}
+SetMessage message {message}
 StartMessage I want to post a message
 StartMessage Start a message
+StartMessage Write message
+StartMessage Send message
+StartMessage Post message

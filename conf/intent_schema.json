@@ -16,12 +16,12 @@
       "intent": "SetChannelMessage",
       "slots": [
         {
-          "name": "message",
-          "type": "SLACK_MESSAGE"
-        },
-        {
           "name": "channel",
           "type": "LIST_OF_CHANNELS"
+        },
+        {
+          "name": "message",
+          "type": "SLACK_MESSAGE"
         }
       ]
     },
